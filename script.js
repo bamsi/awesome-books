@@ -1,10 +1,11 @@
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["getBooks"] }] */
 class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
 
-  static getBooks() {
+  getBooks() {
     let bookList = [];
     const books = JSON.parse(window.localStorage.getItem('books'));
     if (books != null) {
