@@ -4,9 +4,9 @@ class Book {
     this.author = author;
   }
 
-  getBooks() {
+  static getBooks() {
     let bookList = [];
-    const books = JSON.parse(window.localStorage.getItem("books"));
+    const books = JSON.parse(window.localStorage.getItem('books'));
     if (books != null) {
       bookList = books;
     }
@@ -14,15 +14,15 @@ class Book {
   }
 
   saveBook() {
-    let booksList = this.getBooks();
+    const booksList = this.getBooks();
     booksList.push({ title: this.title, author: this.author });
-    window.localStorage.setItem("books", JSON.stringify(booksList));
+    window.localStorage.setItem('books', JSON.stringify(booksList));
   }
 
   displayBooks() {
-    const bookList = document.querySelector(".book-list");
-    let booksList = this.getBooks();
-    let htmlList = "";
+    const bookList = document.querySelector('.book-list');
+    const booksList = this.getBooks();
+    let htmlList = '';
     for (let i = 0; i < booksList.length; i += 1) {
       htmlList += `<div class="list-item">
                     <p>${booksList[i].title} by ${booksList[i].author}</p>
@@ -33,26 +33,28 @@ class Book {
   }
 
   deleteBook(index) {
-    let booksList = this.getBooks();
+    const booksList = this.getBooks();
     const newBookList = booksList.filter((_, i) => i !== index);
-    window.localStorage.setItem("books", JSON.stringify(newBookList));
+    window.localStorage.setItem('books', JSON.stringify(newBookList));
   }
 }
 
-const title = document.getElementById("title");
-const author = document.getElementById("author");
-const form = document.getElementById("add-form");
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const form = document.getElementById('add-form');
 
-form.addEventListener("submit", function () {
-  let newBook = new Book(title.value, author.value);
+form.addEventListener('submit', () => {
+  const newBook = new Book(title.value, author.value);
   newBook.saveBook();
 });
 
-let book = new Book();
+const book = new Book();
 window.onload = book.displayBooks();
 
+/* eslint-disable */
 function removeBook(index) {
-  let removeBooks = new Book();
+  const removeBooks = new Book();
   removeBooks.deleteBook(index);
   window.onload = removeBooks.displayBooks();
 }
+/* eslint-enable */
