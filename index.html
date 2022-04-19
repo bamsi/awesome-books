@@ -8,15 +8,18 @@
   </head>
   <body>
     <main>
-      <header>
-        <h1>Awesome books</h1>
-      </header>
-      <section class="book-list">
+      <section>
+        <header>
+          <h1>Awesome books</h1>
+        </header>
+        <div class="book-list"></div>
       </section>
       <!--add books form-->
-      <form action="" id="add-form">
-        <div><input type="text" placeholder="Title" id="title" required/></div>
-        <div><input type="text" placeholder="Author" id="author" required/></div>
+      <form id="add-form">
+        <div><input type="text" placeholder="Title" id="title" required /></div>
+        <div>
+          <input type="text" placeholder="Author" id="author" required />
+        </div>
         <div><button type="submit">Add</button></div>
       </form>
     </main>
