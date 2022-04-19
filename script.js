@@ -26,7 +26,7 @@ class Book {
     for (let i = 0; i < booksList.length; i += 1) {
       htmlList += `<div class="list-item">
                     <p>${booksList[i].title} by ${booksList[i].author}</p>
-                    <button type="submit" onClick="removeBook(${i})">Remove</button>
+                    <button class='remove-button' type="submit" onClick="removeBook(${i})">Remove</button>
                   </div>`;
     }
     bookList.innerHTML = htmlList;
