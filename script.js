@@ -24,11 +24,9 @@ class Book {
     let booksList = this.getBooks();
     let htmlList = "";
     for (let i = 0; i < booksList.length; i += 1) {
-      htmlList += `<div>
-                    <p>${booksList[i].title}</p>
-                    <p>${booksList[i].author}</p>
+      htmlList += `<div class="list-item">
+                    <p>${booksList[i].title} by ${booksList[i].author}</p>
                     <button type="submit" onClick="removeBook(${i})">Remove</button>
-                    <hr />
                   </div>`;
     }
     bookList.innerHTML = htmlList;
@@ -54,7 +52,7 @@ let book = new Book();
 window.onload = book.displayBooks();
 
 function removeBook(index) {
-  let removeBooks = new Book ();
+  let removeBooks = new Book();
   removeBooks.deleteBook(index);
   window.onload = removeBooks.displayBooks();
 }

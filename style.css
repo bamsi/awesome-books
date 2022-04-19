@@ -1,4 +1,23 @@
 #title,
 #author {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+
+.book-section {
+  /* max-width: 70%; */
+}
+
+.book-list {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.container {
+  margin: 0 20%;
 }
