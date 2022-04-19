@@ -33,6 +33,12 @@ class Book {
     }
     bookList.innerHTML = htmlList;
   }
+
+  deleteBook(index) {
+    let booksList = this.getBooks();
+    const newBookList = booksList.filter((_, i) => i !== index);
+    window.localStorage.setItem("books", JSON.stringify(newBookList));
+  }
 }
 
 const title = document.getElementById("title");
@@ -46,3 +52,9 @@ form.addEventListener("submit", function () {
 
 let book = new Book();
 window.onload = book.displayBooks();
+
+function removeBook(index) {
+  let removeBooks = new Book ();
+  removeBooks.deleteBook(index);
+  window.onload = removeBooks.displayBooks();
+}
