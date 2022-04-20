@@ -38,9 +38,9 @@
   color: #000;
 }
 
-.link-item:active {
+.active-link {
   color: blue;
-} 
+}
 
 .nav-items .no-border {
   border-right: 0;
@@ -62,7 +62,6 @@
   margin-bottom: 0.7rem;
   padding: 10px;
 }
-
 
 .book-list {
   border: 1px solid #000;

@@ -7,7 +7,7 @@ class Book {
 
   getBooks() {
     let bookList = [];
-    const books = JSON.parse(window.localStorage.getItem("books"));
+    const books = JSON.parse(window.localStorage.getItem('books'));
     if (books != null) {
       bookList = books;
     }
@@ -17,13 +17,13 @@ class Book {
   saveBook() {
     const booksList = this.getBooks();
     booksList.push({ title: this.title, author: this.author });
-    window.localStorage.setItem("books", JSON.stringify(booksList));
+    window.localStorage.setItem('books', JSON.stringify(booksList));
   }
 
   displayBooks() {
-    const bookList = document.querySelector(".book-list");
+    const bookList = document.querySelector('.book-list');
     const booksList = this.getBooks();
-    let htmlList = "";
+    let htmlList = '';
     for (let i = 0; i < booksList.length; i += 1) {
       htmlList += `<div class="list-item">
                     <p>${booksList[i].title} by ${booksList[i].author}</p>
@@ -36,15 +36,15 @@ class Book {
   deleteBook(index) {
     const booksList = this.getBooks();
     const newBookList = booksList.filter((_, i) => i !== index);
-    window.localStorage.setItem("books", JSON.stringify(newBookList));
+    window.localStorage.setItem('books', JSON.stringify(newBookList));
   }
 }
 
-const title = document.getElementById("title");
-const author = document.getElementById("author");
-const form = document.getElementById("add-form");
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const form = document.getElementById('add-form');
 
-form.addEventListener("submit", () => {
+form.addEventListener('submit', () => {
   const newBook = new Book(title.value, author.value);
   newBook.saveBook();
 });
@@ -60,32 +60,30 @@ function removeBook(index) {
 }
 /* eslint-enable */
 
-let links = document.querySelectorAll(".link-item");
+const links = document.querySelectorAll('.link-item');
 
 links.forEach((e) => {
-  e.addEventListener("click", function () {
+  e.addEventListener('click', () => {
     links.forEach((item) => {
-      let value = item.getAttribute("href");
-      let element = document.querySelector(value);
-      element.classList.add("hide");
+      const value = item.getAttribute('href');
+      const element = document.querySelector(value);
+      element.classList.add('hide');
+      item.classList.remove('active-link');
     });
-    let attributeValue = e.getAttribute("href");
-    let section = document.querySelector(attributeValue);
-    section.classList.remove("hide");
+    const attributeValue = e.getAttribute('href');
+    const section = document.querySelector(attributeValue);
+    section.classList.remove('hide');
+    e.classList.add('active-link');
   });
 });
 
-
 function displayDate() {
-  let d = new Date();
-  let dformat = [
-    d.getMonth()+1,
-    d.getDate(),
-    d.getFullYear()].join(' ')+',' + ' ' + 
-   [d.getHours(),
-    d.getMinutes(),
-    d.getSeconds()].join(':');
-    document.getElementById("date").innerHTML = dformat;
+  const d = new Date();
+  const dformat = `${[d.getMonth() + 1, d.getDate(), d.getFullYear()].join(' ')
+  },`
+    + ` ${
+      [d.getHours(), d.getMinutes(), d.getSeconds()].join(':')}`;
+  document.getElementById('date').innerHTML = dformat;
 }
 
-window.onload = displayDate(); 
+window.onload = displayDate();
