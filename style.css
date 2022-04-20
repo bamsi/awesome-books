@@ -8,6 +8,35 @@
   margin: 0 20%;
 }
 
+.navbar {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #000;
+  padding: 1rem 1.2rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-items li {
+  border-right: 2px solid #000;
+  padding-right: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-items .no-border {
+  border-right: 0;
+}
+
 .heading {
   text-align: center;
   margin: 5% 0;
