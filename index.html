@@ -6,43 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Awesome Books</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main class="container">
       <header>
-          <nav class="navbar">
-            <div class="logo-div">
-              <a href="#" class="logo">Awesome Books</a>
-            </div>
-            <div class="nav">
-              <ul class="nav-items">
-                <li><a>List</a></li>
-                <li><a>Add New</a></li>
-                <li class="no-border"><a>Contact</a></li>
-              </ul>
-            </div>
-            
-          </nav>
+        <nav class="navbar">
+          <div class="logo-div">
+            <a href="#" class="logo">Awesome Books</a>
+          </div>
+          <div class="nav">
+            <ul class="nav-items">
+              <li><a>List</a></li>
+              <li><a>Add New</a></li>
+              <li class="no-border"><a>Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p class="current-date">March, 15th 2020, 09:00AM</p>
       </header>
       <section class="book-section">
         <h1 class="heading">Awesome books</h1>
         <div class="book-list"></div>
       </section>
-      <hr>
+      <hr />
       <!--add books form-->
       <section class="new-book">
         <h2 class="heading">Add a New Book</h2>
         <form id="add-form">
-        <div><input type="text" placeholder="Title" id="title" required /></div>
-        <div>
-          <input type="text" placeholder="Author" id="author" required />
-        </div>
-        <div class="add-button"><button type="submit">Add</button></div>
-      </form>
-    </section>
+          <div>
+            <input type="text" placeholder="Title" id="title" required />
+          </div>
+          <div>
+            <input type="text" placeholder="Author" id="author" required />
+          </div>
+          <div class="add-button"><button type="submit">Add</button></div>
+        </form>
+      </section>
+      <!-- footer section -->
+      <footer class="footer">
+        <div>copyright &copy; 2022</div>
+        <div><a>@developers</a></div>
+      </footer>
     </main>
     <script src="script.js"></script>
   </body>
