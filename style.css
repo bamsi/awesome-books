@@ -33,6 +33,15 @@
   cursor: pointer;
 }
 
+.link-item {
+  text-decoration: none;
+  color: #000;
+}
+
+.link-item:active {
+  color: blue;
+} 
+
 .nav-items .no-border {
   border-right: 0;
 }
@@ -54,6 +63,7 @@
   padding: 10px;
 }
 
+
 .book-list {
   border: 1px solid #000;
   margin-bottom: 5%;
@@ -70,7 +80,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 5% 22.5%;
 }
 
 #add-form {
@@ -99,7 +109,7 @@
 }
 
 .contact-section {
-  margin: 0 auto;
+  margin: 5% 20%;
   display: flex;
   flex-direction: column;
   align-items: center;

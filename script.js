@@ -74,3 +74,18 @@ links.forEach((e) => {
     section.classList.remove("hide");
   });
 });
+
+
+function displayDate() {
+  let d = new Date();
+  let dformat = [
+    d.getMonth()+1,
+    d.getDate(),
+    d.getFullYear()].join(' ')+',' + ' ' + 
+   [d.getHours(),
+    d.getMinutes(),
+    d.getSeconds()].join(':');
+    document.getElementById("date").innerHTML = dformat;
+}
+
+window.onload = displayDate(); 
