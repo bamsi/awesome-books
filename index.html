@@ -22,21 +22,22 @@
           </div>
           <div class="nav">
             <ul class="nav-items">
-              <li><a>List</a></li>
-              <li><a>Add New</a></li>
-              <li class="no-border"><a>Contact</a></li>
+              <li><a class="link-item" href="#list">List</a></li>
+              <li><a class="link-item" href="#add-book">Add New</a></li>
+              <li class="no-border">
+                <a class="link-item" href="#contact">Contact</a>
+              </li>
             </ul>
           </div>
         </nav>
         <p class="current-date">March, 15th 2020, 09:00AM</p>
       </header>
-      <section class="book-section">
+      <section class="book-section" id="list">
         <h1 class="heading">Awesome books</h1>
         <div class="book-list"></div>
       </section>
-      <hr />
       <!--add books form-->
-      <section class="new-book">
+      <section class="new-book hide" id="add-book">
         <h2 class="heading">Add a New Book</h2>
         <form id="add-form">
           <div>
@@ -48,9 +49,12 @@
           <div class="add-button"><button type="submit">Add</button></div>
         </form>
       </section>
-      <section class="contact-section">
+      <section class="contact-section hide" id="contact">
         <h2 class="heading">Contact Information</h2>
-        <p>Do you have any questions? Or you just want to say hello! <br> Then you can reach out to us!</p>
+        <p>
+          Do you have any questions? Or you just want to say hello! <br />
+          Then you can reach out to us!
+        </p>
         <ul class="contact-info">
           <li>Our email: LoremIspum@email.com</li>
           <li>Our phone number: +985 23131123</li>
